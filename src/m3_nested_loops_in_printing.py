@@ -201,7 +201,7 @@ def alternating_brackets(m, n):
     Precondition:  m and n are positive integers with m >= n.
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # TODONE: 5. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -210,9 +210,11 @@ def alternating_brackets(m, n):
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
     for k in range(m-n+1):
-        for j in range((-k+m)//2):
-            print('[]',end='')
-        print('[')
+        for j in range(-k+m):
+            if j %2 == 0 :
+                print('[',end='')
+            else:
+                print(']',end='')
         print()
 
 def run_test_triangle_same_number_in_each_row():
